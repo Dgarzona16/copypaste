@@ -1,2 +1,2 @@
 # copypaste
-me quebraron banda
+<niga wtf> me quebraron banda
