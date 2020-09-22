@@ -21,7 +21,7 @@ int main(){
         aggPila(pila, num);
 
         cont++;
-        cout<<"desea ingresar otro numero?(y/n)\n";
+        cout<<"desea ingresar otro numero?(pene/n)\n";
         cin>>band;
     }
 
