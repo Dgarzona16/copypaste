@@ -54,7 +54,7 @@ int main(){
             if((temp.dureza>0) && (temp.grosor>0)){
                 push(pila,temp);
             }else{
-                "no se pueden meter datos negativos...\n\n";
+                cout<<"no se pueden meter datos negativos...\n\n";
             }
             system("pause");
             break;
@@ -79,6 +79,8 @@ int main(){
                 cout<<"la columna no tiene datos...\n\n";
             }
             system("pause");
+            break;
+
 
         case 4:
             if(!empty(pila)){
