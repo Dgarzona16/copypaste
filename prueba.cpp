@@ -36,3 +36,9 @@ void aggPila(nodo *&pila, int n){
     new_nodo->sig = pila;
     pila = new_nodo;
 }
+    int XP,Friends;
+
+void life(){
+    Friends++;
+    XP++;
+}

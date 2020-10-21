@@ -44,16 +44,6 @@ void menuPrincipal(){
     }
 };
 
-void menuCola(){
-    system("cls");
-    cout<<"\t---COLA "<<cola<<"---\n";
-    cout<<"\n1.Agregar cancion.";
-    cout<<"\n2.eliminar ancion.";
-    cout<<"\n3.Vaciar cola.";
-    cout<<"\n4.Mostrar contenido.";
-    cout<<"\n\topcion: ";cin>>opcion2;
-};
-
 void agregar_cancion(){
     system("cls");
     fflush(stdin);
@@ -61,7 +51,7 @@ void agregar_cancion(){
     cout<<"\nTitulo: ";getline(cin,cancion.titulo);
     cout<<"\nArtista: ";getline(cin,cancion.cantante);
     cout<<"\nGenero: ";getline(cin,cancion.genero);
-    cout<<"\nDruacion: ";cin>>cancion.duracion;
+    cout<<"\nDuracion: ";cin>>cancion.duracion;
     if ((cancion.titulo != " ") && (cancion.cantante != " ") && (cancion.genero != " ") && (cancion.duracion>0))
     {
         switch (opcion1)
@@ -172,6 +162,34 @@ void mostrar_canciones(){
     }
 };
 
+void menuCola(){
+    system("cls");
+    cout<<"\t---COLA "<<cola<<"---\n";
+    cout<<"\n1.Agregar cancion.";
+    cout<<"\n2.eliminar cancion.";
+    cout<<"\n3.Vaciar cola.";
+    cout<<"\n4.Mostrar contenido.";
+    cout<<"\n\topcion: ";cin>>opcion2;
+
+            switch (opcion2)
+        {
+        case 1:
+            agregar_cancion();
+            break;
+        case 2:
+            eliminar_cancion();
+            system("pause");
+            break;
+        case 3:
+            vaciar_cola();
+            system("pause");
+            break;
+        case 4:
+            mostrar_canciones();
+            break;
+        }
+};
+
 int main(){
     bool continuar = true;
 
@@ -191,24 +209,6 @@ int main(){
         
         default:
             cout<<"\nopcion no valida...\n";
-            break;
-        }
-
-        switch (opcion2)
-        {
-        case 1:
-            agregar_cancion();
-            break;
-        case 2:
-            eliminar_cancion();
-            system("pause");
-            break;
-        case 3:
-            vaciar_cola();
-            system("pause");
-            break;
-        case 4:
-            mostrar_canciones();
             break;
         }
     } while (continuar);
